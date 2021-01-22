@@ -3,42 +3,24 @@
 {% block title %}Animal index{% endblock %}
 
 {% block body %}
-    <h1>Animal index</h1>
+        <div class="col-md-6 m-auto">
+            <h1 class="text-center mb-3">Découvre des animaux</h1>
+            {% for animal in animals %}
+                <div class="card mb-5">
+                    <img
+                            src="https://mdbootstrap.com/img/new/slides/041.jpg"
+                            class="card-img-top"
+                            alt={{ animal.name }}
+                    />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{ animal.name }}</h5>
+                        <p class="card-text col-md-6">
+                            {{ animal.description }}
+                        </p>
+                    </div>
+                    <a href="{{ path('app_animal_show', {id: animal.id}) }}" class="btn btn-primary btn-block">Go somewhere</a>
+                </div>
+            {% endfor %}
+        </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Race</th>
-                <th>Name</th>
-                <th>Size</th>
-                <th>Weight</th>
-                <th>Description</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for animal in animals %}
-            <tr>
-                <td>{{ animal.id }}</td>
-                <td>{{ animal.race }}</td>
-                <td>{{ animal.name }}</td>
-                <td>{{ animal.size }}</td>
-                <td>{{ animal.weight }}</td>
-                <td>{{ animal.description }}</td>
-                <td>{{ animal.user.username }}</td>
-                <td>
-                    <a href="{{ path('animal_show', {'id': animal.id}) }}">show</a>
-                    <a href="{{ path('animal_edit', {'id': animal.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('animal_new') }}">Create new</a>
 {% endblock %}

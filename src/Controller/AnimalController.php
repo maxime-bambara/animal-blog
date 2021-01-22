@@ -16,7 +16,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class AnimalController extends AbstractController
 {
     /**
-     * @Route("/", name="animal_index", methods={"GET"})
+     * @Route("/", name="app_animal_index", methods={"GET"})
      * @param AnimalRepository $animalRepository
      * @return Response
      */
@@ -28,7 +28,7 @@ class AnimalController extends AbstractController
     }
 
     /**
-     * @Route("/animal/new", name="animal_new", methods={"GET","POST"})
+     * @Route("/animal/new", name="app_animal_new", methods={"GET","POST"})
      * @param Request $request
      * @param UserInterface $user
      * @return Response
@@ -46,7 +46,7 @@ class AnimalController extends AbstractController
             $entityManager->persist($animal);
             $entityManager->flush();
 
-            return $this->redirectToRoute('animal_index');
+            return $this->redirectToRoute('app_animal_index');
         }
 
         return $this->render('animal/new.html.twig', [
@@ -56,7 +56,7 @@ class AnimalController extends AbstractController
     }
 
     /**
-     * @Route("/animal/{id}", name="animal_show", methods={"GET"})
+     * @Route("/animal/{id}", name="app_animal_show", methods={"GET"})
      * @param Animal $animal
      * @return Response
      */
@@ -68,7 +68,7 @@ class AnimalController extends AbstractController
     }
 
     /**
-     * @Route("/animal/{id}/edit", name="animal_edit", methods={"GET","POST"})
+     * @Route("/animal/{id}/edit", name="app_animal_edit", methods={"GET","POST"})
      * @param Request $request
      * @param Animal $animal
      * @return Response
@@ -91,7 +91,7 @@ class AnimalController extends AbstractController
     }
 
     /**
-     * @Route("/animal/{id}", name="animal_delete", methods={"DELETE"})
+     * @Route("/animal/{id}", name="app_animal_delete", methods={"DELETE"})
      * @param Request $request
      * @param Animal $animal
      * @return Response
@@ -104,6 +104,6 @@ class AnimalController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('animal_index');
+        return $this->redirectToRoute('app_animal_index');
     }
 }

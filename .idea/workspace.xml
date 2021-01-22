@@ -11,10 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3527a6b-def8-4a65-9988-7969763b51da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/elements/nav.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AnimalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnimalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AnimalType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AnimalType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/animal/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/animal/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/animal/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/animal/edit.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/animal/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/animal/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/animal/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/animal/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/animal/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/animal/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +29,13 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,6 +152,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -156,7 +169,7 @@
       <updated>1611317171123</updated>
       <workItem from="1611317172215" duration="50000" />
       <workItem from="1611317246217" duration="1545000" />
-      <workItem from="1611318986734" duration="5268000" />
+      <workItem from="1611318986734" duration="9637000" />
     </task>
     <servers />
   </component>
@@ -180,5 +193,16 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="766" y="266" width="586" height="490" key="find.popup/0.23.1920.977@0.23.1920.977" timestamp="1611323605230" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/base.html.twig</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
