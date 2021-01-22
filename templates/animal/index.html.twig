@@ -26,6 +26,7 @@
                 <td>{{ animal.size }}</td>
                 <td>{{ animal.weight }}</td>
                 <td>{{ animal.description }}</td>
+                <td>{{ animal.user.username }}</td>
                 <td>
                     <a href="{{ path('animal_show', {'id': animal.id}) }}">show</a>
                     <a href="{{ path('animal_edit', {'id': animal.id}) }}">edit</a>

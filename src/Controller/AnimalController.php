@@ -10,6 +10,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 
 class AnimalController extends AbstractController
@@ -29,12 +30,15 @@ class AnimalController extends AbstractController
     /**
      * @Route("/animal/new", name="animal_new", methods={"GET","POST"})
      * @param Request $request
+     * @param UserInterface $user
      * @return Response
      */
-    public function new(Request $request): Response
+    public function new(Request $request, UserInterface $user): Response
     {
+
         $animal = new Animal();
         $form = $this->createForm(AnimalType::class, $animal);
+        $animal->setUser($user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

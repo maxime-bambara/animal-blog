@@ -17,7 +17,6 @@ class AnimalType extends AbstractType
             ->add('size')
             ->add('weight')
             ->add('description')
-            ->add('user')
         ;
     }
 
